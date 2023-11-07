@@ -70,7 +70,50 @@ def print_pattern19(n):
         
         print("")
 
+def print_pattern20(n):
+    # first half
+    for i in range(n-1):
+        # star - 1
+        for j in range(i+1):
+            print("*", end="")
+        
+        # space
+        for j in range((2*n) - (2*(i+1))):
+            print(" ", end="")
+        
+        # star - 2
+        for j in range(i+1):
+            print("*", end="")
+        print("")
+    
+    # second half
+    for i in range(n):
+        # star - 1
+        for j in range(n-i):
+            print("*", end="")
+        
+        # space
+        for j in range(2*i):
+            print(" ", end="")
+        
+        # star - 2
+        for j in range(n-i):
+            print("*", end="")
+        print("")
+        
+
+def print_pattern21(n):
+    for i in range(n):
+        for j in range(n):
+            if i == 0 or j == 0 or i == n-1 or j == n-1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print("")
+
 # print_pattern16(5)
 # print_pattern17(4)
 # print_pattern18(5)
-print_pattern19(5)
+# print_pattern19(5)
+# print_pattern20(5)
+print_pattern21(5)
