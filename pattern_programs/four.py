@@ -38,6 +38,39 @@ def print_pattern18(n):
         print()
 
 
+def print_pattern19(n):
+    # First Half
+    for i in range(n):
+        # Star - 1
+        for j in range(n - i):
+            print("*", end="")
+        
+        # Space
+        for j in range(2*i):
+            print(" ", end="")
+
+        # Star - 2
+        for j in range(n - i):
+            print("*", end="")
+        print("")
+    
+    # Second half
+    for i in range(n):
+        # star - 1
+        for j in range(i+1):
+            print("*", end="")
+        
+        # Space
+        for j in range((2*n) - (2*(i+1))):
+            print(" ", end="")
+        
+        # star - 2
+        for j in range(i+1):
+            print("*", end="")
+        
+        print("")
+
 # print_pattern16(5)
 # print_pattern17(4)
-print_pattern18(5)
+# print_pattern18(5)
+print_pattern19(5)
