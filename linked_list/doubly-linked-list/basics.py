@@ -54,9 +54,20 @@ class DoublyLinkedList:
         temp.next = newNode
         newNode.prev = temp
 
+    def reverse(self):
+        slow = self.head
+        fast = self.head
+        
+        while fast != None:
+            slow = fast
+            fast = fast.next
+            slow.next, slow.prev = slow.prev, slow.next
+        self.head = slow        
 
 array = [10, 20, 30, 40, 50]
 dll = DoublyLinkedList(array)
-dll.insert_at_begin(5)
-dll.insert_at_last(60)
+# dll.insert_at_begin(5)
+# dll.insert_at_last(60)
+print(dll)
+dll.reverse()
 print(dll)
